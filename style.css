@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 40px;
+    background: linear-gradient(90deg,#2b7cff,#1a63d6);
+    color: #fff;
+}
+
+.brand h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.brand p {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+.subscribe-top input {
+    padding: 10px 12px;
+    border-radius: 6px 0 0 6px;
+    border: none;
+    width: 220px;
+}
+
+.subscribe-top .btn {
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+    color: #1a63d6;
+    font-weight: bold;
+}
+
+nav {
+    background: #111;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 14px;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    padding: 28px 40px;
+}
+
+/* Featured */
+#featured .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
+}
+
+.featured-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(20,30,50,0.06);
+    padding-bottom: 16px;
+}
+
+.featured-card img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.featured-card h3 {
+    color: #0d3a8c;
+    padding: 12px 16px 6px 16px;
+    font-size: 20px;
+}
+
+.featured-card p {
+    padding: 0 16px 12px 16px;
+    color: #444;
+}
+
+.read-more {
+    display: inline-block;
+    margin-left: 16px;
+    margin-bottom: 8px;
+    color: #1a63d6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Article lists */
+.article-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.post {
+    display: flex;
+    gap: 12px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(20,30,50,0.04);
+    padding: 10px;
+    align-items: center;
+}
+
+.post img {
+    width: 150px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.post-body h4 {
+    color: #0d3a8c;
+    margin-bottom: 6px;
+}
+
+.post-body p {
+    color: #555;
+    font-size: 14px;
+}
+
+.post-body a {
+    display: inline-block;
+    margin-top: 6px;
+    color: #1a63d6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Subscription panel / sidebar */
+.subscription-panel {
+    background: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(20,30,50,0.05);
+    position: sticky;
+    top: 24px;
+}
+
+.subscription-panel h3 {
+    color: #0d3a8c;
+    margin-bottom: 10px;
+}
+
+.subscription-form input,
+.subscription-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.subscription-form .btn {
+    width: 100%;
+    background: #1a63d6;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.testimonial {
+    margin-top: 12px;
+    padding: 10px;
+    background: #f8fbff;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    background: #0f1724;
+    color: #cbd5e1;
+    padding: 20px 40px;
+    text-align: center;
+    margin-top: 28px;
+}
+
+/* Buttons */
+.btn {
+    background: #1a63d6;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 6px;
+    }
+
+    .post img {
+        width: 120px;
+        height: 80px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .subscribe-top input {
+        width: 160px;
+    }
+}
